@@ -1,0 +1,315 @@
+<nav class="navbar">
+  <div class="container nav-content">
+    <a href="#inicio" class="logo" (click)="fecharMenu()">
+      Henrique<span>.Dev</span>
+    </a>
+
+    <button
+      class="menu-btn"
+      type="button"
+      (click)="toggleMenu()"
+      aria-label="Abrir menu"
+    >
+      {{ menuAberto ? '×' : '☰' }}
+    </button>
+
+    <ul class="nav-links" [class.active]="menuAberto">
+      <li><a href="#inicio" (click)="fecharMenu()">Início</a></li>
+      <li><a href="#servicos" (click)="fecharMenu()">Serviços</a></li>
+      <li><a href="#projetos" (click)="fecharMenu()">Projetos</a></li>
+      <li><a href="#contato" (click)="fecharMenu()">Contato</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="inicio" class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <span class="badge">Desenvolvedor Web & Automação</span>
+
+      <h1>Crio sites, sistemas e automações para negócios digitais.</h1>
+
+      <p>
+        Sou Henrique Cairo, estudante de TSI. Trabalho com Angular, Node.js,
+        HTML e CSS para criar soluções modernas, responsivas e conectadas com
+        automações.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#contato" class="btn btn-primary">Solicitar Projeto</a>
+        <a href="#projetos" class="btn btn-secondary">Ver Projetos</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img
+        src="assets/images/avatar_portifolio.png"
+        alt="Avatar Henrique Cairo"
+      />
+    </div>
+  </div>
+</section>
+
+<section id="servicos" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge">Serviços</span>
+      <h2>O que eu desenvolvo</h2>
+      <p>
+        Meu foco é entregar presença digital, sistemas web e automações simples
+        para empresas que querem melhorar sua operação.
+      </p>
+    </div>
+
+    <div class="cards-grid">
+      <article class="card">
+        <div class="icon">💻</div>
+        <h3>Sites e Landing Pages</h3>
+        <p>
+          Páginas modernas, responsivas e focadas em apresentação profissional,
+          captação de contatos e conversão.
+        </p>
+
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>Responsividade</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="icon">⚙️</div>
+        <h3>Sistemas Web</h3>
+        <p>
+          Interfaces e funcionalidades com Angular, organização de componentes,
+          consumo de APIs e integração com back-end.
+        </p>
+
+        <ul>
+          <li>Angular</li>
+          <li>TypeScript</li>
+          <li>Node.js</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="icon">🤖</div>
+        <h3>Automações</h3>
+        <p>
+          Fluxos simples para formulário, e-mail automático, alerta de lead,
+          webhooks e integração com atendimento.
+        </p>
+
+        <ul>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>Webhooks</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="projetos" class="section projetos">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge">Projetos</span>
+      <h2>Vitrine de Projetos</h2>
+      <p>
+        Projetos que mostram minha evolução prática em desenvolvimento web,
+        e-commerce, interfaces modernas e automação.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+      <article class="project-card">
+        <img
+          src="assets/images/project-ecommerce.jpg"
+          alt="Projeto E-commerce HC Store"
+        />
+
+        <div class="project-info">
+          <div class="techs">
+            <span>Angular</span>
+            <span>Node.js</span>
+            <span>MySQL</span>
+          </div>
+
+          <h3>HC Store</h3>
+
+          <p>
+            E-commerce desenvolvido com Angular no front-end, Node.js no
+            back-end e integração com banco de dados.
+          </p>
+
+          <a href="#contato">Ver detalhes →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <img
+          src="assets/images/project_pessoal.jpg"
+          alt="Projeto Portfólio Pessoal"
+        />
+
+        <div class="project-info">
+          <div class="techs">
+            <span>Angular</span>
+            <span>HTML</span>
+            <span>CSS</span>
+          </div>
+
+          <h3>Portfólio Pessoal</h3>
+
+          <p>
+            Portfólio profissional desenvolvido para apresentar meus projetos,
+            habilidades técnicas e serviços.
+          </p>
+
+          <a href="#contato">Ver detalhes →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <img
+          src="assets/images/landing_page.jpg"
+          alt="Landing page clínica odontológica"
+        />
+
+        <div class="project-info">
+          <div class="techs">
+            <span>Landing Page</span>
+            <span>Node.js</span>
+            <span>Automação</span>
+          </div>
+
+          <h3>Clínica Odontológica</h3>
+
+          <p>
+            Projeto em desenvolvimento com landing page, captação de leads e
+            automação simples de contato.
+          </p>
+
+          <a href="#contato">Ver detalhes →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="section contato">
+  <div class="container contact-container">
+    <div class="contact-card">
+      <span class="badge">Contato</span>
+
+      <h2>Vamos conversar sobre seu projeto?</h2>
+
+      <p>
+        Envie uma mensagem e eu retorno com uma ideia inicial para seu site,
+        sistema, e-commerce ou automação.
+      </p>
+
+      <form
+        class="contact-form"
+        action="https://formsubmit.co/dev.henriquecairo@gmail.com"
+        method="POST"
+      >
+        <input type="hidden" name="_subject" value="Novo lead pelo portfólio Henrique.Dev">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+
+        <input
+          type="hidden"
+          name="_autoresponse"
+          value="Olá! Recebi sua solicitação pelo meu portfólio. Muito obrigado pelo contato. Em até 24 horas retornarei pelo WhatsApp ou e-mail informado. Atenciosamente, Henrique Cairo."
+        >
+
+        <input type="hidden" name="_next" value="https://portfolio-henrique.vercel.app/#contato">
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input
+              id="nome"
+              type="text"
+              name="Nome"
+              placeholder="Seu nome"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="seuemail@email.com"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="whatsapp">WhatsApp</label>
+            <input
+              id="whatsapp"
+              type="text"
+              name="WhatsApp"
+              placeholder="(11) 99999-9999"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="tipo">Tipo de projeto</label>
+            <select id="tipo" name="Tipo de projeto" required>
+              <option value="">Selecione</option>
+              <option value="Site ou Landing Page">Site ou Landing Page</option>
+              <option value="Sistema Web">Sistema Web</option>
+              <option value="E-commerce">E-commerce</option>
+              <option value="Automação">Automação</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea
+            id="mensagem"
+            name="Mensagem"
+            placeholder="Conte rapidamente o que você precisa..."
+            required
+          ></textarea>
+        </div>
+
+        <button class="btn btn-primary form-button" type="submit">
+          Enviar mensagem
+        </button>
+        <p class="form-security">
+            Seus dados são utilizados apenas para entrar em contato sobre seu projeto.
+        </p>
+      </form>
+
+      <div class="automation-box">
+        <strong>Automação simples:</strong>
+        após o envio, os dados chegam diretamente no meu e-mail e o cliente
+        recebe uma resposta automática de confirmação.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <a href="#inicio" class="logo">Henrique<span>.Dev</span></a>
+
+    <p>© 2026 Henrique Cairo. Portfólio pessoal.</p>
+
+    <div class="footer-links">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+    </div>
+  </div>
+</footer>
