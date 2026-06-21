@@ -1,59 +1,116 @@
-# PortfolioHenrique
+# 💼 Portfólio - Henrique Cairo
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.12.
+Meu portfólio profissional desenvolvido com **Angular**, apresentando projetos, tecnologias e serviços voltados para desenvolvimento web e automações.
 
-## Development server
+## 🚀 Acesse o projeto
 
-To start a local development server, run:
+**Portfólio Online:**
 
-```bash
-ng serve
-```
+> Em breve
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+**GitHub:**
 
-## Code scaffolding
+> https://github.com/HenriqueCairo/portfolio-henrique
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+# 📌 Sobre
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Este projeto foi desenvolvido para apresentar meu trabalho como Desenvolvedor Full Stack.
 
-```bash
-ng generate --help
-```
+Nele apresento:
 
-## Building
+* Projetos desenvolvidos
+* Tecnologias que domino
+* Serviços oferecidos
+* Formulário de contato integrado ao FormSubmit
+* Layout totalmente responsivo
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+# 🛠 Tecnologias utilizadas
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+* Angular 21
+* TypeScript
+* HTML5
+* CSS3
+* Responsive Design
+* FormSubmit
+* Git
+* GitHub
 
-## Running unit tests
+---
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+# 📂 Projetos apresentados
 
-```bash
-ng test
-```
+## 🛍 HC Store
 
-## Running end-to-end tests
+E-commerce desenvolvido utilizando Angular no front-end e Node.js no back-end.
 
-For end-to-end (e2e) testing, run:
+Tecnologias:
 
-```bash
-ng e2e
-```
+* Angular
+* Node.js
+* MySQL
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+hccstore.com 
 
-## Additional Resources
+## 💼 Portfólio Pessoal
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Aplicação desenvolvida para apresentar meus projetos, experiência e serviços.
+
+---
+
+## 🦷 Landing Page Clínica Odontológica
+
+Projeto focado em captação de leads e automação de atendimento.
+
+---
+
+# ✨ Funcionalidades
+
+* Layout moderno
+* Responsivo
+* Menu Mobile
+* Scroll suave entre seções
+* Cards de projetos
+* Formulário de contato
+* Resposta automática por e-mail utilizando FormSubmit
+
+---
+
+# 📱 Responsividade
+
+O projeto foi desenvolvido para funcionar em:
+
+* Desktop
+* Notebook
+* Tablet
+* Smartphone
+
+---
+
+# 📸 Preview
+
+Em breve...
+
+---
+
+# 📬 Contato
+
+**E-mail**
+
+[contato@SEUDOMINIO.com](mailto:contato@SEUDOMINIO.com)
+
+**LinkedIn**
+
+Em breve
+
+**GitHub**
+
+https://github.com/HenriqueCairo
+
+---
+
+Desenvolvido por **Henrique Cairo**
+
