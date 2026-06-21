@@ -53,7 +53,7 @@ Tecnologias:
 * Node.js
 * MySQL
 
-hccstore.com 
+https://hccstore.com/home
 
 ## 💼 Portfólio Pessoal
 
