@@ -1,315 +1,953 @@
-<nav class="navbar">
-  <div class="container nav-content">
-    <a href="#inicio" class="logo" (click)="fecharMenu()">
-      Henrique<span>.Dev</span>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner container">
+
+    <a class="brand" href="#inicio" (click)="closeMenu()">
+      <span class="dot"></span>
+      Henrique<span class="brand-muted">.Dev</span>
     </a>
 
-    <button
-      class="menu-btn"
-      type="button"
-      (click)="toggleMenu()"
-      aria-label="Abrir menu"
-    >
-      {{ menuAberto ? '×' : '☰' }}
-    </button>
+    <nav class="desktop-nav" aria-label="Navegação principal">
+      <a href="#solucoes">Soluções</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#processo">Processo</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
 
-    <ul class="nav-links" [class.active]="menuAberto">
-      <li><a href="#inicio" (click)="fecharMenu()">Início</a></li>
-      <li><a href="#servicos" (click)="fecharMenu()">Serviços</a></li>
-      <li><a href="#projetos" (click)="fecharMenu()">Projetos</a></li>
-      <li><a href="#contato" (click)="fecharMenu()">Contato</a></li>
-    </ul>
-  </div>
-</nav>
-
-<section id="inicio" class="hero">
-  <div class="container hero-grid">
-    <div class="hero-text">
-      <span class="badge">Desenvolvedor Web & Automação</span>
-
-      <h1>Crio sites, sistemas e automações para negócios digitais.</h1>
-
-      <p>
-        Sou Henrique Cairo, estudante de TSI. Trabalho com Angular, Node.js,
-        HTML e CSS para criar soluções modernas, responsivas e conectadas com
-        automações.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#contato" class="btn btn-primary">Solicitar Projeto</a>
-        <a href="#projetos" class="btn btn-secondary">Ver Projetos</a>
-      </div>
-    </div>
-
-    <div class="hero-image">
-      <img
-        src="assets/images/avatar_portifolio.png"
-        alt="Avatar Henrique Cairo"
-      />
-    </div>
-  </div>
-</section>
-
-<section id="servicos" class="section">
-  <div class="container">
-    <div class="section-header">
-      <span class="badge">Serviços</span>
-      <h2>O que eu desenvolvo</h2>
-      <p>
-        Meu foco é entregar presença digital, sistemas web e automações simples
-        para empresas que querem melhorar sua operação.
-      </p>
-    </div>
-
-    <div class="cards-grid">
-      <article class="card">
-        <div class="icon">💻</div>
-        <h3>Sites e Landing Pages</h3>
-        <p>
-          Páginas modernas, responsivas e focadas em apresentação profissional,
-          captação de contatos e conversão.
-        </p>
-
-        <ul>
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>Responsividade</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <div class="icon">⚙️</div>
-        <h3>Sistemas Web</h3>
-        <p>
-          Interfaces e funcionalidades com Angular, organização de componentes,
-          consumo de APIs e integração com back-end.
-        </p>
-
-        <ul>
-          <li>Angular</li>
-          <li>TypeScript</li>
-          <li>Node.js</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <div class="icon">🤖</div>
-        <h3>Automações</h3>
-        <p>
-          Fluxos simples para formulário, e-mail automático, alerta de lead,
-          webhooks e integração com atendimento.
-        </p>
-
-        <ul>
-          <li>Node.js</li>
-          <li>Express</li>
-          <li>Webhooks</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="projetos" class="section projetos">
-  <div class="container">
-    <div class="section-header">
-      <span class="badge">Projetos</span>
-      <h2>Vitrine de Projetos</h2>
-      <p>
-        Projetos que mostram minha evolução prática em desenvolvimento web,
-        e-commerce, interfaces modernas e automação.
-      </p>
-    </div>
-
-    <div class="projects-grid">
-      <article class="project-card">
-        <img
-          src="assets/images/project-ecommerce.jpg"
-          alt="Projeto E-commerce HC Store"
-        />
-
-        <div class="project-info">
-          <div class="techs">
-            <span>Angular</span>
-            <span>Node.js</span>
-            <span>MySQL</span>
-          </div>
-
-          <h3>HC Store</h3>
-
-          <p>
-            E-commerce desenvolvido com Angular no front-end, Node.js no
-            back-end e integração com banco de dados.
-          </p>
-
-          <a href="https://hccstore.com" target="_blank">Ver detalhes →</a>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <img
-          src="assets/images/project_pessoal.jpg"
-          alt="Projeto Portfólio Pessoal"
-        />
-
-        <div class="project-info">
-          <div class="techs">
-            <span>Angular</span>
-            <span>HTML</span>
-            <span>CSS</span>
-          </div>
-
-          <h3>Portfólio Pessoal</h3>
-
-          <p>
-            Portfólio profissional desenvolvido para apresentar meus projetos,
-            habilidades técnicas e serviços.
-          </p>
-
-          <a href="https://portfolio-henrique-gules-chi.vercel.app/">Ver detalhes →</a>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <img
-          src="assets/images/landing_page.jpg"
-          alt="Landing page clínica odontológica"
-        />
-
-        <div class="project-info">
-          <div class="techs">
-            <span>Landing Page</span>
-            <span>Node.js</span>
-            <span>Automação</span>
-          </div>
-
-          <h3>Clínica Odontológica</h3>
-
-          <p>
-            Projeto em desenvolvimento com landing page, captação de leads e
-            automação simples de contato.
-          </p>
-
-          <a href="#contato">Ver detalhes →</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="contato" class="section contato">
-  <div class="container contact-container">
-    <div class="contact-card">
-      <span class="badge">Contato</span>
-
-      <h2>Vamos conversar sobre seu projeto?</h2>
-
-      <p>
-        Envie uma mensagem e eu retorno com uma ideia inicial para seu site,
-        sistema, e-commerce ou automação.
-      </p>
-
-      <form
-        class="contact-form"
-        action="https://formsubmit.co/dev.henriquecairo@gmail.com?next=https://portfolio-henrique-gules-chi.vercel.app/obrigado.html"
-        method="POST"
+    <div class="header-actions">
+      <a
+        class="header-whatsapp"
+        [href]="whatsappUrl"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        <input type="hidden" name="_subject" value="Novo lead pelo portfólio Henrique.Dev">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
+        <span class="online-dot"></span>
+        WhatsApp
+      </a>
 
-        <input
-          type="hidden"
-          name="_autoresponse"
-          value="Olá! Recebi sua solicitação pelo meu portfólio. Muito obrigado pelo contato. Em até 24 horas retornarei pelo WhatsApp ou e-mail informado. Atenciosamente, Henrique Cairo."
-        >
-
-        <input type="hidden" name="_next" value="https://portfolio-henrique-gules-chi.vercel.app/obrigado.html">
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="nome">Nome</label>
-            <input
-              id="nome"
-              type="text"
-              name="Nome"
-              placeholder="Seu nome"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="email">E-mail</label>
-            <input
-              id="email"
-              type="email"
-              name="email"
-              placeholder="seuemail@email.com"
-              required
-            />
-          </div>
-        </div>
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="whatsapp">WhatsApp</label>
-            <input
-              id="whatsapp"
-              type="text"
-              name="WhatsApp"
-              placeholder="(11) 99999-9999"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="tipo">Tipo de projeto</label>
-            <select id="tipo" name="Tipo de projeto" required>
-              <option value="">Selecione</option>
-              <option value="Site ou Landing Page">Site ou Landing Page</option>
-              <option value="Sistema Web">Sistema Web</option>
-              <option value="E-commerce">E-commerce</option>
-              <option value="Automação">Automação</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="mensagem">Mensagem</label>
-          <textarea
-            id="mensagem"
-            name="Mensagem"
-            placeholder="Conte rapidamente o que você precisa..."
-            required
-          ></textarea>
-        </div>
-
-        <button class="btn btn-primary form-button" type="submit">
-          Enviar mensagem
-        </button>
-        <p class="form-security">
-            Seus dados são utilizados apenas para entrar em contato sobre seu projeto.
-        </p>
-      </form>
-
-      <div class="automation-box">
-        <strong>Automação simples:</strong>
-        após o envio, os dados chegam diretamente no meu e-mail e o cliente
-        recebe uma resposta automática de confirmação.
-      </div>
+      <button
+        class="menu-toggle"
+        type="button"
+        [attr.aria-expanded]="menuOpen"
+        [attr.aria-label]="menuOpen ? 'Fechar menu' : 'Abrir menu'"
+        (click)="menuOpen = !menuOpen"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </div>
-</section>
 
-<footer class="footer">
-  <div class="container footer-content">
-    <a href="#inicio" class="logo">Henrique<span>.Dev</span></a>
+  <nav
+    class="mobile-nav"
+    [class.open]="menuOpen"
+    aria-label="Navegação mobile"
+  >
+    <a href="#solucoes" (click)="closeMenu()">Soluções</a>
+    <a href="#projetos" (click)="closeMenu()">Projetos</a>
+    <a href="#processo" (click)="closeMenu()">Processo</a>
+    <a href="#sobre" (click)="closeMenu()">Sobre</a>
+    <a href="#contato" (click)="closeMenu()">Contato</a>
+  </nav>
+</header>
 
-    <p>© 2026 Henrique Cairo. Portfólio pessoal.</p>
+<main>
 
-    <div class="footer-links">
-      <a href="https://github.com/HenriqueCairo">GitHub</a>
-      <a href="https://www.linkedin.com/in/henrique-cairo/">LinkedIn</a>
-      <a href="https://www.instagram.com/dev.henriquecairo?igsh=a2l2aWhvaXpobW12&utm_source=qr">Instagram</a>
+  <!-- HERO -->
+  <section id="inicio" class="hero section container">
+
+    <p class="eyebrow">
+      DESENVOLVIMENTO
+      <span class="eyebrow-muted">· AUTOMAÇÃO · IA</span>
+    </p>
+
+    <h1>
+      Transformo ideias
+      <br class="desktop-break">
+      e processos em
+      <br class="desktop-break">
+      <span class="accent">soluções</span> digitais.
+    </h1>
+
+    <p class="hero-sub">
+      Sites, sistemas e automações desenvolvidos para
+      empresas que querem melhorar sua presença digital,
+      otimizar processos e crescer com tecnologia.
+    </p>
+
+    <div class="hero-actions">
+      <a
+        class="btn btn-primary"
+        [href]="whatsappUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Falar sobre meu projeto <span>↗</span>
+      </a>
+
+      <a class="btn btn-secondary" href="#projetos">
+        Ver projetos reais <span>↓</span>
+      </a>
     </div>
+
+    <p class="specialties">
+      ESPECIALIDADES:
+      <span>
+        Sites · Sistemas · Aplicativos · Automação · IA · Integrações
+      </span>
+    </p>
+
+    <div class="journey">
+      <div class="journey-head">
+        <span>JORNADA DIGITAL CONTÍNUA</span>
+        <span class="accent">END-TO-END</span>
+      </div>
+
+      <div class="journey-track">
+        <div class="journey-item">
+          <span class="journey-dot"></span>
+          Empresa
+        </div>
+
+        <div class="journey-item">
+          <span class="journey-dot"></span>
+          Sistema
+        </div>
+
+        <div class="journey-item current">
+          <span class="journey-dot"></span>
+          Automação
+        </div>
+
+        <div class="journey-item">
+          <span class="journey-dot"></span>
+          WhatsApp
+        </div>
+
+        <div class="journey-item done">
+          <span class="journey-dot"></span>
+          Cliente
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMAS -->
+  <section class="section problem-section container">
+
+    <p class="eyebrow">DIAGNÓSTICO OPERACIONAL</p>
+
+    <h2>
+      Tecnologia começa com um problema
+      que precisa ser resolvido.
+    </h2>
+
+    <div class="problems">
+
+      <article class="problem">
+        <h3>Seu atendimento demora para responder?</h3>
+        <p>
+          Processos manuais podem gerar filas, atrasos
+          e oportunidades perdidas.
+        </p>
+      </article>
+
+      <article class="problem">
+        <h3>Sua empresa depende de planilhas para tudo?</h3>
+        <p>
+          Informações descentralizadas dificultam a organização
+          e o acompanhamento.
+        </p>
+      </article>
+
+      <article class="problem">
+        <h3>Seu negócio ainda não tem uma presença digital profissional?</h3>
+        <p>
+          Um site bem estruturado facilita a apresentação
+          dos serviços e o contato com novos clientes.
+        </p>
+      </article>
+
+      <article class="problem">
+        <h3>Você executa as mesmas tarefas todos os dias?</h3>
+        <p>
+          Integrações e automações podem reduzir atividades
+          repetitivas e conectar ferramentas.
+        </p>
+      </article>
+
+    </div>
+
+    <p class="transition">
+      <span class="dot"></span>
+      É aqui que a tecnologia entra.
+      <span class="accent">↓</span>
+    </p>
+  </section>
+
+  <!-- SOLUÇÕES -->
+  <section id="solucoes" class="section capabilities-section container">
+
+    <p class="eyebrow">CAPACIDADES TÉCNICAS</p>
+
+    <h2>Soluções construídas para o seu negócio.</h2>
+
+    <p class="section-intro">
+      Arquitetura digital desenvolvida sob medida
+      com foco em performance, conversão e
+      estabilidade operacional.
+    </p>
+
+    <div class="capabilities">
+
+      <article class="capability">
+        <div class="capability-top">
+          <span class="index">01</span>
+          <span class="mono muted">WEB DEVELOPMENT</span>
+        </div>
+
+        <h3>Sites & Landing Pages</h3>
+
+        <p>
+          Experiências digitais responsivas para apresentar
+          sua empresa, comunicar seus serviços e transformar
+          visitantes em oportunidades de negócio.
+        </p>
+
+        <p class="mono capability-tags">
+          LANDING PAGES / SITES INSTITUCIONAIS / SEO
+        </p>
+      </article>
+
+      <article class="capability">
+        <div class="capability-top">
+          <span class="index">02</span>
+          <span class="mono muted">SOFTWARE ENGINEERING</span>
+        </div>
+
+        <h3>Sistemas Personalizados</h3>
+
+        <p>
+          Aplicações desenvolvidas de acordo com a operação
+          do negócio, com autenticação, painéis administrativos,
+          gestão de dados e integração com APIs.
+        </p>
+
+        <p class="mono capability-tags">
+          DASHBOARDS / CRUD / APIs / BANCO DE DADOS
+        </p>
+      </article>
+
+      <article class="capability">
+        <div class="capability-top">
+          <span class="index">03</span>
+          <span class="mono muted">MOBILE DEVELOPMENT</span>
+        </div>
+
+        <h3>Aplicativos Mobile</h3>
+
+        <p>
+          Aplicativos para dispositivos móveis com interfaces
+          intuitivas, navegação estruturada e integração
+          com serviços e sistemas existentes.
+        </p>
+
+        <p class="mono capability-tags">
+          REACT NATIVE / EXPO / IOS / ANDROID
+        </p>
+      </article>
+
+      <article class="capability">
+        <div class="capability-top">
+          <span class="index">04</span>
+          <span class="mono muted">AUTOMATION & AI</span>
+        </div>
+
+        <h3>Automação & Inteligência Artificial</h3>
+
+        <p>
+          Fluxos que conectam formulários, atendimento,
+          WhatsApp e sistemas para diminuir tarefas
+          manuais e organizar informações.
+        </p>
+
+        <p class="mono capability-tags">
+          N8N / WEBHOOKS / WHATSAPP / IA
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projetos" class="section projects-section container">
+
+    <p class="eyebrow">CASOS DE SUCESSO</p>
+
+    <h2>
+      Projetos que já estão funcionando
+      no mundo real.
+    </h2>
+
+    <p class="mono muted project-count">
+      03 projetos em produção contínua
+    </p>
+
+    <!-- PROJETO 1: HC STORE -->
+    <article class="project">
+
+      <p class="project-index mono">
+        01 / E-COMMERCE / SISTEMA
+      </p>
+
+      <div class="project-heading">
+        <h3>HC Store</h3>
+      </div>
+
+      <p class="project-description">
+        Plataforma de e-commerce desenvolvida para uma operação
+        real de moda masculina, com catálogo de produtos,
+        carrinho, checkout e painel administrativo.
+      </p>
+
+      <ul class="project-features">
+        <li>Loja virtual responsiva</li>
+        <li>Catálogo e detalhes dos produtos</li>
+        <li>Carrinho e checkout</li>
+        <li>Painel administrativo</li>
+        <li>Gerenciamento de produtos e pedidos</li>
+      </ul>
+
+      <div class="project-media">
+
+        <div class="browser-bar">
+          <span class="browser-dots">● ● ●</span>
+          <span>hccstore.com</span>
+          <span class="accent">Desktop</span>
+        </div>
+
+        <!-- IMAGEM PRINCIPAL HC STORE -->
+        <div class="project-image">
+          <img
+            src="/assets/images/homehc.png"
+            alt="Página inicial da HC Store"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- IMAGENS SECUNDÁRIAS -->
+        <div class="store-subshots">
+
+          <div class="project-image secondary">
+            <img
+              src="/assets/images/Paginaproduto.png"
+              alt="Página de produto da HC Store"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="project-image secondary">
+            <img
+              src="/assets/images/Paineladm.png"
+              alt="Painel administrativo da HC Store"
+              loading="lazy"
+            />
+          </div>
+
+        </div>
+      </div>
+
+      <p class="mono project-tags">
+        ANGULAR / NODE.JS / EXPRESS / MYSQL / PRISMA
+      </p>
+
+      <div class="project-links">
+        <a href="/projetos/hc-store/">
+          Ver case <span>→</span>
+        </a>
+
+        <a
+          href="https://hccstore.com/home"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Acessar <span>↗</span>
+        </a>
+      </div>
+
+    </article>
+
+    <!-- PROJETO 2: DRA. BRUNA ALVES -->
+    <article class="project">
+
+      <p class="project-index mono">
+        02 / LANDING PAGE / SAÚDE
+      </p>
+
+      <div class="project-heading">
+        <h3>Dra. Bruna Alves</h3>
+        <span class="mono muted project-note">
+          Figma → Produto desenvolvido
+        </span>
+      </div>
+
+      <p class="project-description">
+        Landing page para apresentação profissional de uma
+        clínica odontológica, com informações sobre os
+        serviços e direcionamento de pacientes para
+        atendimento via WhatsApp.
+      </p>
+
+      <ul class="project-features">
+        <li>Layout responsivo</li>
+        <li>Apresentação de serviços</li>
+        <li>Identidade visual profissional</li>
+        <li>Contato direto pelo WhatsApp</li>
+      </ul>
+
+      <div class="project-media">
+
+        <div class="browser-bar">
+          <span class="browser-dots">● ● ●</span>
+          <span>clinica-bruna-alves.vercel.app</span>
+          <span class="accent">Desktop + Mobile View</span>
+        </div>
+
+        <!-- IMAGEM DRA. BRUNA -->
+        <div class="project-image">
+          <img
+            src="/assets/images/dr-bruna.png"
+            alt="Página inicial da Dra. Bruna Alves"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+
+      <p class="mono project-tags">
+        FRONT-END / RESPONSIVIDADE / WHATSAPP
+      </p>
+
+      <div class="project-links">
+        <a href="/projetos/dra-bruna/">
+          Ver case <span>→</span>
+        </a>
+
+        <a
+          href="https://clinica-bruna-alves.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Acessar <span>↗</span>
+        </a>
+      </div>
+
+    </article>
+
+    <!-- PROJETO 3: LS TRANSPORTE -->
+    <article class="project">
+
+      <p class="project-index mono">
+        03 / LANDING PAGE / LOGÍSTICA
+      </p>
+
+      <div class="project-heading">
+        <h3>LS Transporte</h3>
+      </div>
+
+      <p class="project-description">
+        Página institucional para uma transportadora
+        especializada em produtos odontológicos, com
+        apresentação dos serviços e formulário de
+        solicitação de transporte.
+      </p>
+
+      <ul class="project-features">
+        <li>Site institucional</li>
+        <li>Apresentação dos serviços</li>
+        <li>Formulário de solicitação</li>
+        <li>Direcionamento para WhatsApp</li>
+      </ul>
+
+      <div class="project-media">
+
+        <div class="browser-bar">
+          <span class="browser-dots">● ● ●</span>
+          <span>lstransportee.com.br</span>
+          <span class="accent">Fluxo: Captação → WhatsApp</span>
+        </div>
+
+        <!-- IMAGEM LS TRANSPORTE -->
+        <div class="project-image">
+          <img
+            src="/assets/images/Lstransporte.png"
+            alt="Página inicial da LS Transporte"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+
+      <p class="mono project-tags">
+        FRONT-END / FORMULÁRIOS / WHATSAPP
+      </p>
+
+      <div class="project-links">
+        <a href="/projetos/ls-transporte">
+          Ver case <span>→</span>
+        </a>
+
+        <a
+          href="https://lstransportee.com.br/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Acessar <span>↗</span>
+        </a>
+      </div>
+
+    </article>
+
+  </section>
+
+  <!-- PROCESSO -->
+  <section id="processo" class="section process-section container">
+
+    <p class="eyebrow">METODOLOGIA</p>
+
+    <h2>Da necessidade à solução.</h2>
+
+    <p class="section-intro">
+      Ciclo de desenvolvimento pragmático,
+      transparente e alinhado aos marcos do negócio.
+    </p>
+
+    <ol class="timeline">
+
+      <li>
+        <span class="timeline-number mono">01</span>
+        <div>
+          <h3>Entendimento do problema</h3>
+          <p>
+            Primeiro identificamos as necessidades do negócio,
+            os processos envolvidos e o resultado esperado.
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <span class="timeline-number mono">02</span>
+        <div>
+          <h3>Planejamento da solução</h3>
+          <p>
+            Definimos a estrutura, as funcionalidades,
+            as integrações e as etapas necessárias.
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <span class="timeline-number mono">03</span>
+        <div>
+          <h3>Desenvolvimento</h3>
+          <p>
+            Construção das interfaces, regras de negócio
+            e integrações, com validações ao longo do processo.
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <span class="timeline-number mono">04</span>
+        <div>
+          <h3>Testes e entrega</h3>
+          <p>
+            Verificação das funcionalidades, ajustes finais
+            e preparação da solução para utilização.
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <span class="timeline-number mono">05</span>
+        <div>
+          <h3>Evolução</h3>
+          <p>
+            Acompanhamento das necessidades futuras para
+            permitir melhorias e novas funcionalidades.
+          </p>
+        </div>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- AUTOMAÇÃO -->
+  <section class="section automation-section container">
+
+    <p class="eyebrow">ECOSSISTEMA CONECTADO</p>
+
+    <h2>Seu site pode ser apenas o começo.</h2>
+
+    <p class="section-intro">
+      A experiência pode continuar depois
+      que o visitante clica no botão.
+    </p>
+
+    <div class="workflow">
+
+      <div class="workflow-item">
+        <span>01 Visitante acessa o site</span>
+        <span class="mono workflow-status">ENTRADA</span>
+      </div>
+
+      <div class="workflow-item workflow-highlight">
+        <span>02 Formulário recebe os dados</span>
+        <span class="mono workflow-status">CAPTAÇÃO</span>
+      </div>
+
+      <div class="workflow-item workflow-highlight">
+        <span>03 Webhook envia as informações</span>
+        <span class="mono workflow-status">INTEGRAÇÃO</span>
+      </div>
+
+      <div class="workflow-item">
+        <span>04 n8n processa o fluxo</span>
+        <span class="mono workflow-status">AUTOMAÇÃO</span>
+      </div>
+
+      <div class="workflow-item">
+        <span>05 Sistema organiza o atendimento</span>
+        <span class="mono workflow-status">PROCESSAMENTO</span>
+      </div>
+
+      <div class="workflow-item workflow-highlight">
+        <span>06 Cliente recebe uma resposta</span>
+        <span class="mono workflow-status">SAÍDA</span>
+      </div>
+
+    </div>
+
+    <p class="workflow-caption">
+      Integrações e automações conectam atendimento,
+      captação, agenda e sistemas em um fluxo contínuo,
+      reduzindo tarefas manuais repetitivas.
+    </p>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section about-section container">
+
+    <p class="eyebrow">ENGENHARIA HUMANA</p>
+
+    <h2>Tecnologia precisa resolver alguma coisa.</h2>
+
+    <div class="profile">
+
+      <div class="avatar">HC</div>
+
+      <div>
+        <h3>Henrique Cairo</h3>
+        <span class="accent">Desenvolvedor Fullstack</span>
+      </div>
+
+    </div>
+
+    <p>
+      Sou Henrique, desenvolvedor por trás da Henrique.Dev.
+      Desenvolvo soluções digitais pensando não apenas no
+      código, mas no problema que a tecnologia precisa resolver.
+      Trabalho com sites, sistemas, aplicações, integrações
+      e automações, conectando desenvolvimento às necessidades
+      reais de cada negócio.
+    </p>
+
+    <blockquote>
+      Foco em código limpo, arquitetura escalável e
+      soluções que geram eficiência para operações reais.
+      Sem burocracia ou termos desnecessários.
+    </blockquote>
+  </section>
+
+  <!-- TECNOLOGIAS -->
+  <section class="section tech-section container">
+
+    <p class="eyebrow">STACK TECNOLÓGICA</p>
+
+    <h2>Arquitetura e ferramentas de alta precisão.</h2>
+
+    <div class="tech-grid">
+
+      <article>
+        <h3>Front-end</h3>
+        <p>
+          Interfaces modernas, responsivas e orientadas
+          à experiência do usuário.
+        </p>
+        <span class="mono">
+          Angular / TypeScript / JavaScript / HTML / CSS
+        </span>
+      </article>
+
+      <article>
+        <h3>Back-end</h3>
+        <p>
+          APIs, regras de negócio e comunicação
+          entre aplicações e serviços.
+        </p>
+        <span class="mono">
+          Node.js / Express / Java / Spring Boot
+        </span>
+      </article>
+
+      <article>
+        <h3>Banco de dados</h3>
+        <p>
+          Persistência e organização de dados
+          para aplicações e sistemas.
+        </p>
+        <span class="mono">MySQL / Prisma</span>
+      </article>
+
+      <article>
+        <h3>Mobile</h3>
+        <p>
+          Aplicativos conectados a APIs e preparados
+          para diferentes dispositivos.
+        </p>
+        <span class="mono">React Native / Expo</span>
+      </article>
+
+      <article>
+        <h3>Automação</h3>
+        <p>
+          Integrações e fluxos para conectar
+          ferramentas e processos.
+        </p>
+        <span class="mono">
+          n8n / Webhooks / APIs / WhatsApp
+        </span>
+      </article>
+
+      <article>
+        <h3>Infraestrutura</h3>
+        <p>
+          Publicação, versionamento e manutenção
+          de aplicações.
+        </p>
+        <span class="mono">
+          Git / GitHub / Vercel / Render / Hostinger
+        </span>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="section contact-section container">
+
+    <p class="eyebrow">
+      TEM UMA IDEIA OU UM PROBLEMA?
+    </p>
+
+    <h2>
+      Qual processo da sua empresa poderia
+      funcionar melhor com tecnologia?
+    </h2>
+
+    <p class="section-intro">
+      Pode ser uma nova presença digital, um sistema
+      personalizado ou um processo que ainda depende
+      de trabalho manual. Vamos entender primeiro
+      o problema e depois construir a solução.
+    </p>
+
+    <a
+      class="whatsapp-cta"
+      [href]="whatsappUrl"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span class="wa-icon">▣</span>
+
+      <span>
+        <strong>Conversar pelo WhatsApp →</strong>
+        <small>Conte brevemente o que você precisa.</small>
+      </span>
+
+      <span class="wa-arrow">→</span>
+    </a>
+
+    <div class="form-heading">
+      OU ENVIE O RESUMO DO PROJETO
+    </div>
+
+    <form (ngSubmit)="sendForm()" #contactForm="ngForm">
+
+      <label>
+        Nome completo
+        <input
+          name="name"
+          [(ngModel)]="form.name"
+          placeholder="Seu nome"
+          required
+        />
+      </label>
+
+      <label>
+        Empresa
+        <input
+          name="company"
+          [(ngModel)]="form.company"
+          placeholder="Nome da sua empresa"
+        />
+      </label>
+
+      <label>
+        WhatsApp
+        <input
+          name="whatsapp"
+          [(ngModel)]="form.whatsapp"
+          placeholder="(00) 99999-9999"
+          required
+        />
+      </label>
+
+      <label>
+        E-mail corporativo
+        <input
+          type="email"
+          name="email"
+          [(ngModel)]="form.email"
+          placeholder="voce@empresa.com"
+          required
+          email
+        />
+      </label>
+
+      <fieldset>
+        <legend>O que você precisa?</legend>
+
+        <div class="service-options">
+
+          <label class="service-option">
+            <input
+              type="checkbox"
+              (change)="toggleService('Site / Landing Page')"
+            />
+            <span>Site / Landing Page</span>
+          </label>
+
+          <label class="service-option">
+            <input
+              type="checkbox"
+              (change)="toggleService('Sistema personalizado')"
+            />
+            <span>Sistema personalizado</span>
+          </label>
+
+          <label class="service-option">
+            <input
+              type="checkbox"
+              (change)="toggleService('Aplicativo mobile')"
+            />
+            <span>Aplicativo mobile</span>
+          </label>
+
+          <label class="service-option">
+            <input
+              type="checkbox"
+              (change)="toggleService('Automação')"
+            />
+            <span>Automação</span>
+          </label>
+
+          <label class="service-option">
+            <input
+              type="checkbox"
+              (change)="toggleService('Integração com IA')"
+            />
+            <span>Integração com IA</span>
+          </label>
+
+          <label class="service-option">
+            <input
+              type="checkbox"
+              (change)="toggleService('Ainda não sei')"
+            />
+            <span>Ainda não sei</span>
+          </label>
+
+        </div>
+      </fieldset>
+
+      <label>
+        Mensagem / resumo do projeto
+        <textarea
+          name="message"
+          [(ngModel)]="form.message"
+          rows="4"
+          placeholder="Descreva brevemente o projeto..."
+        ></textarea>
+      </label>
+
+      <button
+        class="btn btn-primary submit-btn"
+        type="submit"
+        [disabled]="contactForm.invalid"
+      >
+        Enviar projeto <span>↗</span>
+      </button>
+
+    </form>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+
+    <a class="brand" href="#inicio">
+      <span class="dot"></span>
+      Henrique<span class="brand-muted">.Dev</span>
+    </a>
+
+    <p>
+      Desenvolvimento · Sistemas · Automação
+    </p>
+
+    <nav aria-label="Rodapé">
+      <a href="#solucoes">Soluções</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#processo">Processo</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="socials">
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+        LinkedIn ↗
+      </a>
+
+      <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+        GitHub ↗
+      </a>
+
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+        Instagram ↗
+      </a>
+    </div>
+
+    <p class="copyright">
+      © 2026 Henrique.Dev — Studio de Arquitetura de
+      Software & Soluções Digitais.
+      Todos os direitos reservados.
+    </p>
+
   </div>
 </footer>
+
